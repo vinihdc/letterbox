@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>letterbox</title>
+  <script defer src="/src/carousel.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-900">
+
+  <div class="relative w-[500px]">
+    <div class="relative overflow-hidden rounded-lg">
+      <div class="flex transition-transform duration-500" id="carousel-container">
+        <img src="./src/assets/lucas.png" class="w-full flex-shrink-0">
+        <img src="./src/assets/traks.png" class="w-full flex-shrink-0">
+        <img src="./src/assets/lucas.png" class="w-full flex-shrink-0">
+      </div>
+    </div>
+
+    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-black/50 text-white">
+      &#10094;
+    </button>
+    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-black/50 text-white">
+      &#10095;
+    </button>
+
+    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div class="w-3 h-3 bg-white rounded-full" data-index="0"></div>
+      <div class="w-3 h-3 bg-gray-500 rounded-full" data-index="1"></div>
+      <div class="w-3 h-3 bg-gray-500 rounded-full" data-index="2"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
